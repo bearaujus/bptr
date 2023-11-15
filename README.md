@@ -84,4 +84,4 @@ complex64Value := bptr.ToComplex64Safe(bptrComplex64) // complex64Value will be 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]((https://github.com/bearaujus/bptr/blob/master/LICENSE)) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/bearaujus/bptr/blob/master/LICENSE) file for details.
