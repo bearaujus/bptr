@@ -90,6 +90,150 @@ func FromUint64(v uint64) *uint64 {
 	return &v
 }
 
+// FromBoolNilAble converts a bool to a *bool. If the input value is the default value, return nil.
+func FromBoolNilAble(v bool) *bool {
+	if v == false {
+		return nil
+	}
+	return &v
+}
+
+// FromByteNilAble converts a byte to a *byte. If the input value is the default value, return nil.
+func FromByteNilAble(v byte) *byte {
+	if v == 0 {
+		return nil
+	}
+	return &v
+}
+
+// FromComplex64NilAble converts a complex64 to a *complex64. If the input value is the default value, return nil.
+func FromComplex64NilAble(v complex64) *complex64 {
+	if v == 0 { // default value for complex64
+		return nil
+	}
+	return &v
+}
+
+// FromComplex128NilAble converts a complex128 to a *complex128. If the input value is the default value, return nil.
+func FromComplex128NilAble(v complex128) *complex128 {
+	if v == 0 { // default value for complex128
+		return nil
+	}
+	return &v
+}
+
+// FromFloat32NilAble converts a float32 to a *float32. If the input value is the default value, return nil.
+func FromFloat32NilAble(v float32) *float32 {
+	if v == 0 { // default value for float32
+		return nil
+	}
+	return &v
+}
+
+// FromFloat64NilAble converts a float64 to a *float64. If the input value is the default value, return nil.
+func FromFloat64NilAble(v float64) *float64 {
+	if v == 0 { // default value for float64
+		return nil
+	}
+	return &v
+}
+
+// FromIntNilAble converts an int to a *int. If the input value is the default value, return nil.
+func FromIntNilAble(v int) *int {
+	if v == 0 { // default value for int
+		return nil
+	}
+	return &v
+}
+
+// FromInt8NilAble converts an int8 to a *int8. If the input value is the default value, return nil.
+func FromInt8NilAble(v int8) *int8 {
+	if v == 0 { // default value for int8
+		return nil
+	}
+	return &v
+}
+
+// FromInt16NilAble converts an int16 to a *int16. If the input value is the default value, return nil.
+func FromInt16NilAble(v int16) *int16 {
+	if v == 0 { // default value for int16
+		return nil
+	}
+	return &v
+}
+
+// FromInt32NilAble converts an int32 to a *int32. If the input value is the default value, return nil.
+func FromInt32NilAble(v int32) *int32 {
+	if v == 0 { // default value for int32
+		return nil
+	}
+	return &v
+}
+
+// FromInt64NilAble converts an int64 to a *int64. If the input value is the default value, return nil.
+func FromInt64NilAble(v int64) *int64 {
+	if v == 0 { // default value for int64
+		return nil
+	}
+	return &v
+}
+
+// FromRuneNilAble converts a rune to a *rune. If the input value is the default value, return nil.
+func FromRuneNilAble(v rune) *rune {
+	if v == 0 { // default value for rune
+		return nil
+	}
+	return &v
+}
+
+// FromStringNilAble converts a string to a *string. If the input value is the default value, return nil.
+func FromStringNilAble(v string) *string {
+	if v == "" { // default value for string
+		return nil
+	}
+	return &v
+}
+
+// FromUintNilAble converts a uint to a *uint. If the input value is the default value, return nil.
+func FromUintNilAble(v uint) *uint {
+	if v == 0 { // default value for uint
+		return nil
+	}
+	return &v
+}
+
+// FromUint8NilAble converts a uint8 to a *uint8. If the input value is the default value, return nil.
+func FromUint8NilAble(v uint8) *uint8 {
+	if v == 0 { // default value for uint8
+		return nil
+	}
+	return &v
+}
+
+// FromUint16NilAble converts a uint16 to a *uint16. If the input value is the default value, return nil.
+func FromUint16NilAble(v uint16) *uint16 {
+	if v == 0 { // default value for uint16
+		return nil
+	}
+	return &v
+}
+
+// FromUint32NilAble converts a uint32 to a *uint32. If the input value is the default value, return nil.
+func FromUint32NilAble(v uint32) *uint32 {
+	if v == 0 { // default value for uint32
+		return nil
+	}
+	return &v
+}
+
+// FromUint64NilAble converts a uint64 to a *uint64. If the input value is the default value, return nil.
+func FromUint64NilAble(v uint64) *uint64 {
+	if v == 0 { // default value for uint64
+		return nil
+	}
+	return &v
+}
+
 // ToBool converts a *bool to a bool. Returns an error if the pointer is nil.
 func ToBool(v *bool) (bool, error) {
 	if v == nil {

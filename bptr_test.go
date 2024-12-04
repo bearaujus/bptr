@@ -530,6 +530,528 @@ func TestFromUint64(t *testing.T) {
 	}
 }
 
+func TestFromBoolNilAble(t *testing.T) {
+	type args struct {
+		v bool
+	}
+	tests := []struct {
+		name string
+		args args
+		want *bool
+	}{
+		{
+			name: "default",
+			args: args{v: false},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: true},
+			want: bptr.FromBool(true),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromBoolNilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromBoolNilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromByteNilAble(t *testing.T) {
+	type args struct {
+		v byte
+	}
+	tests := []struct {
+		name string
+		args args
+		want *byte
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromByte(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromByteNilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromByteNilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromComplex64NilAble(t *testing.T) {
+	type args struct {
+		v complex64
+	}
+	tests := []struct {
+		name string
+		args args
+		want *complex64
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromComplex64(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromComplex64NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromComplex64NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromComplex128NilAble(t *testing.T) {
+	type args struct {
+		v complex128
+	}
+	tests := []struct {
+		name string
+		args args
+		want *complex128
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromComplex128(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromComplex128NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromComplex128NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromFloat32NilAble(t *testing.T) {
+	type args struct {
+		v float32
+	}
+	tests := []struct {
+		name string
+		args args
+		want *float32
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromFloat32(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromFloat32NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromFloat32NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromFloat64NilAble(t *testing.T) {
+	type args struct {
+		v float64
+	}
+	tests := []struct {
+		name string
+		args args
+		want *float64
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromFloat64NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromFloat64NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromFloat64NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromIntNilAble(t *testing.T) {
+	type args struct {
+		v int
+	}
+	tests := []struct {
+		name string
+		args args
+		want *int
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromInt(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromIntNilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromIntNilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromInt8NilAble(t *testing.T) {
+	type args struct {
+		v int8
+	}
+	tests := []struct {
+		name string
+		args args
+		want *int8
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromInt8NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromInt8NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromInt8NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromInt16NilAble(t *testing.T) {
+	type args struct {
+		v int16
+	}
+	tests := []struct {
+		name string
+		args args
+		want *int16
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromInt16NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromInt16NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromInt16NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromInt32NilAble(t *testing.T) {
+	type args struct {
+		v int32
+	}
+	tests := []struct {
+		name string
+		args args
+		want *int32
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromInt32NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromInt32NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromInt32NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromInt64NilAble(t *testing.T) {
+	type args struct {
+		v int64
+	}
+	tests := []struct {
+		name string
+		args args
+		want *int64
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromInt64NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromInt64NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromInt64NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromRuneNilAble(t *testing.T) {
+	type args struct {
+		v rune
+	}
+	tests := []struct {
+		name string
+		args args
+		want *rune
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromRuneNilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromRuneNilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromRuneNilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromStringNilAble(t *testing.T) {
+	type args struct {
+		v string
+	}
+	tests := []struct {
+		name string
+		args args
+		want *string
+	}{
+		{
+			name: "default",
+			args: args{v: ""},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: "1"},
+			want: bptr.FromStringNilAble("1"),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromStringNilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromStringNilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromUintNilAble(t *testing.T) {
+	type args struct {
+		v uint
+	}
+	tests := []struct {
+		name string
+		args args
+		want *uint
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromUintNilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromUintNilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromUintNilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromUint8NilAble(t *testing.T) {
+	type args struct {
+		v uint8
+	}
+	tests := []struct {
+		name string
+		args args
+		want *uint8
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromUint8NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromUint8NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromUint8NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromUint16NilAble(t *testing.T) {
+	type args struct {
+		v uint16
+	}
+	tests := []struct {
+		name string
+		args args
+		want *uint16
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromUint16NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromUint16NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromUint16NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromUint32NilAble(t *testing.T) {
+	type args struct {
+		v uint32
+	}
+	tests := []struct {
+		name string
+		args args
+		want *uint32
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromUint32NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromUint32NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromUint32NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFromUint64NilAble(t *testing.T) {
+	type args struct {
+		v uint64
+	}
+	tests := []struct {
+		name string
+		args args
+		want *uint64
+	}{
+		{
+			name: "default",
+			args: args{v: 0},
+			want: nil,
+		},
+		{
+			name: "with value",
+			args: args{v: 1},
+			want: bptr.FromUint64NilAble(1),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := bptr.FromUint64NilAble(tt.args.v); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FromUint64NilAble() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
 func TestToBool(t *testing.T) {
 	type args struct {
 		v *bool

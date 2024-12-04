@@ -22,12 +22,7 @@ import "github.com/bearaujus/bptr"
 
 ### 1. `To*Safe` Functions
 
-The To*Safe functions safely convert pointers to primitive types. If the input pointer is nil, a default value for the type is returned:
-
-Default values:
-- bool → false
-- Numeric types (int, float, etc.) → 0
-- string → ""
+The To*Safe functions safely convert pointers to primitive types. If the input pointer is nil, a **default value* for the type wil be returned:
 
 ```go
 func ToBoolSafe(v *bool) bool
@@ -100,6 +95,31 @@ func FromUint32(v uint32) *uint32
 func FromUint64(v uint64) *uint64
 ```
 
+### 4. `From*NilAble` Functions
+
+The From*NilAble functions are utility functions that take a primitive type and return a pointer to that type. If the input is **default value*, a nil pointer for the type wil be returned:
+
+```go
+func FromBoolNilAble(v bool) *bool
+func FromByteNilAble(v byte) *byte
+func FromComplex64NilAble(v complex64) *complex64
+func FromComplex128NilAble(v complex128) *complex128
+func FromFloat32NilAble(v float32) *float32
+func FromFloat64NilAble(v float64) *float64
+func FromIntNilAble(v int) *int
+func FromInt8NilAble(v int8) *int8
+func FromInt16NilAble(v int16) *int16
+func FromInt32NilAble(v int32) *int32
+func FromInt64NilAble(v int64) *int64
+func FromRuneNilAble(v rune) *rune
+func FromStringNilAble(v string) *string
+func FromUintNilAble(v uint) *uint
+func FromUint8NilAble(v uint8) *uint8
+func FromUint16NilAble(v uint16) *uint16
+func FromUint32NilAble(v uint32) *uint32
+func FromUint64NilAble(v uint64) *uint64
+```
+
 ## Usage Example
 
 ```go
@@ -114,6 +134,13 @@ complex64Value := bptr.ToComplex64Safe(bptrComplex64) // complex64Value will be 
 
 // ... and so on for other types
 ```
+
+## Notes
+
+**default values:*
+- bool → false
+- Numeric types (int, float, etc.) → 0
+- string → ""
 
 ## License
 
